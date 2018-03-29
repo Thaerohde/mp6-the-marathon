@@ -8,13 +8,15 @@ public class Runner {
     private Duration time;
 
 
-    public Runner(String name, Duration time) {
-        this.name = name;
-        this.time = time;
-    }
-    Runner(String name){
+
+    public Runner(){
 
     }
+
+    public Runner(String name) {
+        this.name = name;
+    }
+
 
     public Duration getTime() {
         return time;
