@@ -28,14 +28,12 @@ public class RunnerEndpoint {
     List<Runner> getAll() {
         return runners;
 
-
-
     }
 
     @GetMapping("/winner")
     Runner getwinner() {
         return runners.stream()
-                .sorted((r1, r2) -> r1.getTime().compareTo(r2.getTime()))
+                .sorted((runner1, runner2) -> runner1.getTime().compareTo(runner2.getTime()))
                 .findFirst()
                 .orElse(new Runner("not found"));
     }
